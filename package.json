@@ -1,0 +1,32 @@
+{
+  "name": "novel-fe-blog",
+  "version": "1.0.0",
+  "description": "番茄小说前端技术专栏",
+  "main": "index.js",
+  "scripts": {
+    "test": "lint-md .",
+    "lint": "lint-md .",
+    "lint:fix": "lint-md --fix ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{md,markdown}": [
+      "lint-md --fix"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^16.0.2",
+    "@commitlint/config-conventional": "^16.0.0",
+    "husky": "^4.3.0",
+    "lint-md-cli": "^0.1.2",
+    "lint-staged": "^10.4.0"
+  }
+}
